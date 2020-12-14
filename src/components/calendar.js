@@ -16,7 +16,7 @@ const Calendar = () => {
         })
     }, [])
 
-    const n = 30
+    const n = 28
 
     return (
         <div className='surround'>

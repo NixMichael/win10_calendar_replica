@@ -28,7 +28,7 @@ body {
   min-width: calc((var(--box-dim) * 6) + 48px);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
 }
