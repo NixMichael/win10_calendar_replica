@@ -16,13 +16,30 @@ const Calendar = () => {
         })
     }, [])
 
+    const dateAction = (date) => {
+
+        let postfix = ''
+
+        if (date === 1 || date === 21 || date === 31) {
+            postfix = 'st'
+        } else if (date === 2 || date === 22) {
+            postfix = 'nd'
+        } else if (date === 3 || date === 23) {
+            postfix = 'rd'
+        } else {
+            postfix = 'th'
+        }
+        const newEvent = prompt(`New event for ${date}${postfix} of the month:`)
+    }
+
     const n = 30
 
     return (
         <div className='surround'>
-        <div className='container'>
-            {[...Array(n)].map((e,i) => <div className='date-box' key={i}>{i+1}</div>)}
-        </div>
+            <h3>Calendar</h3>
+            <div className='container'>
+                {[...Array(n)].map((e,i) => <div className='date-box' onClick={() => dateAction(i + 1)} key={i}>{i+1}</div>)}
+            </div>
         </div>
     )
 }

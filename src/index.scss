@@ -19,18 +19,25 @@ body {
 
 .surround {
   background: rgba(78, 78, 78, 0.8);
+  border-radius: 20px;
   overflow: hidden;
   padding: 2rem;
   min-width: 320px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h3 {
+    color: white;
+    align-self: flex-start;
+    padding-left: 1rem;
+  }
 }
 
 .container {
-  margin: auto;
   min-width: calc((var(--box-dim) * 6) + (5 * var(--grid-gap)));
-  height: calc((var(--box-dim) * 5) + (9 * var(--grid-gap)));
+  min-height: calc((var(--box-dim) * 5) + (9 * var(--grid-gap)));
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -47,8 +54,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.date-box:hover {
-  border: 2px solid rgba(255,255,255,0.75);
+  &:hover {
+    border: 2px solid rgba(255,255,255,0.75);
+  }
 }
