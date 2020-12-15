@@ -1,5 +1,6 @@
 :root {
-  --box-dim: 70px;
+  --box-dim: 40px;
+  --grid-gap: 4px;
 }
 
 body {
@@ -20,28 +21,34 @@ body {
   background: rgba(78, 78, 78, 0.8);
   overflow: hidden;
   padding: 2rem;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   margin: auto;
-  width: 37vw;
-  min-width: calc((var(--box-dim) * 6) + 48px);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
+  min-width: calc((var(--box-dim) * 6) + (5 * var(--grid-gap)));
+  height: calc((var(--box-dim) * 5) + (9 * var(--grid-gap)));
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: var(--grid-gap);
 }
 
 .date-box {
-  width: var(--box-dim);
-  height: var(--box-dim);
-  border: 2px solid rgba(255,255,255,0.75);
+  min-width: var(--box-dim);
+  min-height: var(--box-dim);
+  border: 2px solid rgba(255,255,255,0);
   color: rgba(255,255,255,0.8);
   background: rgb(53, 57, 58);
-  margin: 2px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.date-box:hover {
+  border: 2px solid rgba(255,255,255,0.75);
 }
