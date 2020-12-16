@@ -9,7 +9,7 @@ const Calendar = () => {
             const x = e.clientX - container.offsetLeft
             const y = e.clientY - container.offsetTop
             if (e.clientX > container.offsetLeft && e.clientX < (container.offsetLeft + container.offsetWidth) && e.clientY > container.offsetTop && e.clientY < (container.offsetTop + container.offsetHeight)) {
-                container.style.background = `radial-gradient(at ${x}px ${y}px, rgba(100,155,250,0.8) 5%, rgba(100,155,250,0.65) 10%, rgba(100,155,250,0.35) 15%, rgba(78, 78, 78, 0.8) 30%, rgba(78,78,78,0.65) 70%)`
+                container.style.background = `radial-gradient(at ${x}px ${y}px, rgba(100,155,250,0.8) 5%, rgba(100,155,250,0.65) 10%, rgba(100,155,250,0.35) 15%, rgba(78, 78, 78, 0.8) 30%, rgba(78,78,78,0.15) 70%)`
             } else {
                 container.style.background = 'rgba(0,0,0,0);'
             }
@@ -32,7 +32,7 @@ const Calendar = () => {
         const newEvent = prompt(`New event for ${date}${postfix} of the month:`)
     }
 
-    const n = 30
+    const n = 28
 
     return (
         <div className='surround'>
