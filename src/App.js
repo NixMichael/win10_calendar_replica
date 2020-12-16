@@ -4,8 +4,12 @@ import Events from './components/Events'
 function App() {
   return (
     <div className="App">
-      <Calendar />
-      <Events />
+      <div>
+        <Calendar />
+      </div>
+      <div>
+        <Events />
+      </div>
     </div>
   );
 }
